@@ -9,15 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        gaming: gaming {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 3 &kp S>;
-            label = "GAMING";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,10 +20,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W    &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &gaming  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X    &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                           &kp LGUI  &mo 2  &kp ENTER    &kp SPACE  &mo 1  &kp LEFT_ALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 2  &kp ENTER    &kp SPACE  &mo 1  &kp LEFT_ALT
             >;
         };
 
@@ -63,15 +54,6 @@
 &kp LCTRL  &trans          &trans  &trans    &trans    &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp DOUBLE_QUOTES
 &kp LSHFT  &bt BT_CLR_ALL  &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                    &kp LGUI  &trans    &kp ENTER    &kp SPACE  &trans     &kp RALT
-            >;
-        };
-
-        gaming_layer {
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E          &kp R      &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D          &kp F      &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C          &kp V      &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                         &kp LEFT_META  &kp SPACE  &kp ENTER    &kp SPACE  &mo 1  &kp LEFT_ALT
             >;
         };
     };
